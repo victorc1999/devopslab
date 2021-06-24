@@ -12,3 +12,12 @@ install:
 # Defini o script de Teste que deve rodar toda vez que o código for alterado.
 script:
   - python -m unittest -v test
+
+# Definir o Deploy no Heroku
+deploy:
+  provider: heroku
+  api_key: $Heroku
+  edge: true
+  app: devopslab-gti-group04
+  on:
+      branch: main
